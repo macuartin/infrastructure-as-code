@@ -1,0 +1,27 @@
+---
+
+  - name: Download jenkins.repo.
+    get_url:
+      url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+      dest: /etc/yum.repos.d/jenkins.repo
+
+  - name: Import Jenkins Key.
+    rpm_key:
+      state: present
+      key: https://jenkins-ci.org/redhat/jenkins-ci.org.key
+
+  - name: Install jenkins
+    yum:
+      name: jenkins
+      state: present
+
+  - name: Enable Jenkins Service.
+    systemd:
+      name: jenkins
+      enabled: true
+
+  - name: Wait for Jenkins Run.
+    wait_for: timeout=15
+
+
+...

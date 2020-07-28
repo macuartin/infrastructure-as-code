@@ -1,0 +1,43 @@
+# EditorConfig is awesome:http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+# Terraform files
+[*.tf]
+indent_size = 2
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false
+
+# Java Files
+[*.java]
+indent_size = 4
+
+# Gradle Files
+[*.gradle]
+indent_size = 4
+
+# XML Files
+[*.xml]
+indent_size = 2
+
+# JavaScript files
+[*.js]
+indent_size = 2
+
+# YML files
+[*.yml]
+indent_size = 2
